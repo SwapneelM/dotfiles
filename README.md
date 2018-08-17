@@ -5,7 +5,10 @@ Configuration for your terminal and text-editor (vim) that will make you look mu
 
 ## Gallery
 
-![My Terminal - Work](img/swapneel-lxplus.png)
+![My Old Terminal](img/bash-terminal-plain.png)
+Bored with this plain old uninteresting terminal each time you open your machine? I was.
+
+![My Terminal - Work](img/swapneel-lxplus-edited.png)
 This is how my terminal looks when I remotely login to my workplace. Note the random quote. Cute.
 
 ![My Terminal - Personal](img/swapneel-macbook.png)
