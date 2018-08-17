@@ -153,3 +153,7 @@ Read more: [What is the difference between bash and sh](https://stackoverflow.co
 - Zsh is a shell designed for interactive use, although it is also a powerful scripting language. Many of the useful features of bash, ksh, and tcsh were incorporated into zsh; many original features were added. The introductory document details some of the unique features of zsh. It assumes basic knowledge of the standard UNIX shells; the intent is to show a reader already familiar with one of the other major shells what makes zsh more useful or more powerful. This document is not at all comprehensive; read the manual entry for a description of the shell that is complete, concise and up-to-date, although somewhat overwhelming and devoid of examples.
 
 Read more about zsh: [Source Forge](http://zsh.sourceforge.net/)
+
+## Cool-ass Modifications to the Terminal
+
+* For more cool tutorials check out this section on [Awesome ZSH Plugins](https://github.com/unixorn/awesome-zsh-plugins#generic-zsh)
