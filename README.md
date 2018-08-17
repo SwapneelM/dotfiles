@@ -1,5 +1,5 @@
 # dotfiles
-Custom dotfiles for zsh, vim
+Configuration for your terminal and text-editor (vim) that will make you look much cooler than you really are.
 
 **If you are a beginner, I strongly suggest you [Read the Theory first](#theory)**
 
