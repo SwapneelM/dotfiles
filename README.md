@@ -1,7 +1,7 @@
 # dotfiles
 Custom dotfiles for zsh, vim
 
-**If you are a beginner, I strongly suggest you [Read the Theory first](#Theory)**
+**If you are a beginner, I strongly suggest you [Read the Theory first](#theory)**
 
 ## Gallery
 
