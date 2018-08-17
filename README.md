@@ -39,7 +39,10 @@ Yep, `thefuck` basically tells you what the fuck your command should be like. Al
 
 * Follow the installation procedures of each of the above packages and you should have most of the setup already complete with the default `~/.zshrc` file with the theme `robbyrussell` active. This is also a good stage to stop and evaluate if this configuration is good enough for your use. If it is, you don't need the rest.
 
-* In case powerlevel9k is not working (symbols displayed on the terminal are gibberish) you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](https://powerline.readthedocs.io/en/latest/installation.html#installation-on-various-platforms).
+* In case powerlevel9k is not working (symbols displayed on the terminal are gibberish) you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](https://powerline.readthedocs.io/en/latest/installation.html#installation-on-various-platforms). Don't clone the entire directory; use the `depth` flag when cloning:
+    ```
+    $ git clone https://github.com/powerline/fonts.git --depth=1
+    ```
 
 * If you are installing on a machine where you do not have `sudo` privileges, this procedure still works. Just ensure you are installing all the prerequisites from source (i.e. cloning from git (followed by running `make` in case of neovim), and then installing to a local directory.
 
