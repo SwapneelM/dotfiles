@@ -13,8 +13,8 @@ Custom dotfiles for zsh, vim
 
 ## Prerequisites
 
-- [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
-- [Powerlevel9k](https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions)
+- [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh) (install to `~/.oh-my-zsh`)
+- [Powerlevel9k](https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions) (install, then copy to `~/.oh-my-zsh/themes/`)
 - [NeoVim](https://github.com/neovim/neovim) (standalone - if you don't use this then don't install it and remove the corresponding line from `~/.zshrc`)
 - [ZSH Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (this should go in `~/.oh-my-zsh/plugins`)
 - [ZSH Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (this should go in `~/.oh-my-zsh/plugins`)
