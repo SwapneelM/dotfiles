@@ -62,7 +62,18 @@ Yep, `thefuck` basically tells you what the fuck your command should be like. Al
 
 * If you're installing neovim, follow the [instructions for configuration of the vimrc](https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc) (essentially, you have to put it in a folder and rename it as `~/.config/nvim/init.vim`).
 
+* To launch the Z Shell (abbreviated as zsh), just run the command `zsh` from your regular terminal and watch the magic unfold.
+
 * Test the commands `neofetch`, `nvim`, and observe your terminal enter God-mode (no this is a figure of speech, not another Intel vulnerability, geez).
+
+* Once you're certain everything works, and you like `zsh` enough to consider switching over to it try to change your default shell to zsh so that you are able to avoid the need to run the command `zsh` each time you open a shell.
+    ```
+    $ chsh -s $(which zsh)
+    ```
+* **For non-root users**, you will have to hack your way around this because it may not allow you to set the default shell. In this case read about the [theory](#theory) for rc files and add a line to the end of your `~/.bashrc`. What happens is each time you login/open a shell, the system runs `source ~/.bashrc` so you're basically asking for it to run a command that calls the Z shell to be executed each time the system sources the file.
+    ```
+    $ echo "exec zsh" >> ~/.bashrc
+    ```
 
 # Theory
 
@@ -105,9 +116,20 @@ Yep, `thefuck` basically tells you what the fuck your command should be like. Al
 **What exactly are dotfiles?**
 
 **tl;dr**
-Configuration files on unix, or 'dotfiles', often begin with a dot. For example, .vimrc stores your vim settings, .bashrc stores your bash settings, etc.
+- Configuration files on unix, or 'dotfiles', often begin with a dot. For example, .vimrc stores your vim settings, .bashrc stores your bash settings, etc.
 
-In UNIX file systems, dotfiles are text-based configurations files that stores settings of almost every application, service and tool running on your system. These files control the behavior of applications from boot to termination and everything in between. People create backups and elaborate setups of their dotfiles and often share them on GitHub or other code hosting platforms. Helping them setup, their systems faster and restore their configurations when needed.
+- In UNIX file systems, dotfiles are text-based configurations files that stores settings of almost every application, service and tool running on your system. These files control the behavior of applications from boot to termination and everything in between. People create backups and elaborate setups of their dotfiles and often share them on GitHub or other code hosting platforms. Helping them setup, their systems faster and restore their configurations when needed.
+
+### .bashrc / .bash_profile / .zshrc / .vimrc
+
+- These files are basically used to define environment variables and append paths that you would require for installed applications. When you run `source ~/.bashrc`, you are just refreshing the definitions of the variables in the file. The same goes for your `~/.bash_profile` or `~/.zshrc` folder.
+
+- In the case of your `.vimrc` file, it contains specific configurations for settings and plugins that are used when you open your text editor with the `vi` command. Each time you modify it, you probably need to shut and reopen the vim editor to refresh those settings. There are also ways to do it from within vim (without shutting it) such as `:so %`. 
+Reference: [How to reload .vimrc without shutting vim](https://superuser.com/questions/132029/how-do-you-reload-your-vimrc-file-without-restarting-vim#132030)
+
+Read more: [The difference between .bashrc, .bash_profile, .environment](https://stackoverflow.com/questions/415403/whats-the-difference-between-bashrc-bash-profile-and-environment)
+
+- You copy the same `.vimrc` file and rename it to `init.vim` for your Neovim to use (it must lie within `~/.config/nvim`). But you get that it is the same idea - define custom settings in an `rc` file and then `source` it whenever necessary.
 
 **Why do we need them?**
 
