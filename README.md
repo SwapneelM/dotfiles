@@ -33,6 +33,8 @@ Yep, `thefuck` basically tells you what the fuck your command should be like. Al
 - [Neofetch](https://github.com/dylanaraps/neofetch) (standalone)
 - [The Fuck](https://github.com/nvbn/thefuck#installation) (yes, this is for real)
 
+I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately not available on Linux, but it isn't mandatory for this to work). You should definitely consider using it if you're on OSX.
+
 ## Tips and Tricks (Read this, it saves you debugging time):
 
 * If you are not sure where you want to clone and install these packages, I suggest you `cd ~` and install all of them there because it enables ease-of-removal should you choose to do so.
