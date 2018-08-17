@@ -135,7 +135,7 @@ Read more: [The difference between .bashrc, .bash_profile, .environment](https:/
 
 Now, imagine I break your laptop in a way that the no data can’t be recovered. (Pretty dark, right?) and ask you to restore all your little shortcuts, tweaks, and settings that you took hours to configure in your applications. An impossible task. Not really. This is actually where dotfiles come in, these nifty text files that you save, contain thousands of key-value pairs defining each and every aspect of your applications. You can restore your system back to that point in a matter of minutes. (answer by Vipul Gupta)
 
-Read on Quora: https://www.quora.com/What-are-dotfiles
+Read on Quora: [What are dotfiles](https://www.quora.com/What-are-dotfiles)
 
 ### sh 
 - sh (or the Shell Command Language) is a programming language described by the POSIX standard. It has many implementations (ksh88, dash, ...). bash can also be considered an implementation of sh. Because sh is a specification, not an implementation, /bin/sh is a symlink (or a hard link) to an actual implementation (such as bash) on most POSIX systems. 
@@ -143,10 +143,10 @@ Read on Quora: https://www.quora.com/What-are-dotfiles
 ### bash
 - bash started as an sh-compatible implementation (although it predates the POSIX standard by a few years), but as time passed it has acquired many extensions. Many of these extensions may change the behavior of valid POSIX shell scripts, so by itself bash is not a valid POSIX shell. Rather, it is a dialect of the POSIX shell language. bash supports a --posix switch, which makes it more POSIX-compliant. It also tries to mimic POSIX if invoked as sh.
 
-Read more about the difference between bash and sh: https://stackoverflow.com/questions/5725296/difference-between-sh-and-bash#5725402
+Read more: [What is the difference between bash and sh](https://stackoverflow.com/questions/5725296/difference-between-sh-and-bash#5725402)
 
 ### zsh
 
 - Zsh is a shell designed for interactive use, although it is also a powerful scripting language. Many of the useful features of bash, ksh, and tcsh were incorporated into zsh; many original features were added. The introductory document details some of the unique features of zsh. It assumes basic knowledge of the standard UNIX shells; the intent is to show a reader already familiar with one of the other major shells what makes zsh more useful or more powerful. This document is not at all comprehensive; read the manual entry for a description of the shell that is complete, concise and up-to-date, although somewhat overwhelming and devoid of examples.
 
-Read more about zsh: http://zsh.sourceforge.net/
+Read more about zsh: [Source Forge](http://zsh.sourceforge.net/)
