@@ -47,7 +47,9 @@ Custom dotfiles for zsh, vim
     $ mv ~/.zshrc ~/.zshrc.bak
     ```
 
-* Finally, move all the files (Vim and ZSH related) to `~` i.e. `.vim_runtime`, `.zshrc`, and `.vimrc`.
+* Now, move all the files (Vim and ZSH related) to `~` i.e. `.vim_runtime`, `.zshrc`, and `.vimrc`.
+
+* To install the awesome vim configuration, run `sh ~/.vim_runtime/install_awesome_vimrc.sh` (there's also a basic one - check the folder `.vim_runtime` for a README explaining this).
 
 * If you're installing neovim, follow the [instructions for configuration of the vimrc](https://github.com/neovim/neovim/wiki/FAQ#where-should-i-put-my-config-vimrc) (essentially, you have to put it in a folder and rename it as `~/.config/nvim/init.vim`).
 
