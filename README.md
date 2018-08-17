@@ -6,10 +6,19 @@ Configuration for your terminal and text-editor (vim) that will make you look mu
 ## Gallery
 
 ![My Terminal - Work](img/swapneel-lxplus.png)
+This is how my terminal looks when I remotely login to my workplace. Note the random quote. Cute.
+
 ![My Terminal - Personal](img/swapneel-macbook.png)
+This is the configuration for my personal machine. When I first open the terminal, I want my (non-programmer) friends to be confused/awed by what is going on. But that's just me.
+
 ![Automatic completion of commands](img/zsh-autocomplete.png)
+ZSH is pretty useful in terms of reducing the need to type all your commands repetitively
+
 ![Working with Git](img/zsh-git.png)
+It is insanely helpful to know the branch, commit, and status of your current directory. Trust me on this.
+
 ![Just Messing Around with Plugins](img/thefuck-example.png)
+Yep, `thefuck` basically tells you what the fuck your command should be like. Also cute.
 
 ## Prerequisites
 
