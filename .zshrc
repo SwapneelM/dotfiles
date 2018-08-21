@@ -23,6 +23,7 @@ ROOT_SAMPLES="/afs/cern.ch/work/s/smehta/public/tsc-cern/rootfiles/filelist.txt"
 
 # Remove this line if you do not have neovim installed
 alias vi='nvim'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 LANG=en_US.utf-8
 LC_ALL=en_US.utf-8
