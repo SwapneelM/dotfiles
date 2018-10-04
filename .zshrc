@@ -1,6 +1,6 @@
 # Based on https://github.com/da-edra/dotfiles
 export ZSH="$HOME/.oh-my-zsh"
-export SSH_KEY_PATH="~/.ssh/id_rsa"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 export LC_ALL=en_US.UTF-8
 export TERMINAL=terminator
 export PAGER=less
@@ -15,26 +15,12 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='emacs'
 fi
 
-# Custom environment Variables - Swapneel
-
-# User specific aliases and functions
-WORK="/afs/cern.ch/work/s/smehta/public/tsc-cern/DeepJetCore"
-ROOT_SAMPLES="/afs/cern.ch/work/s/smehta/public/tsc-cern/rootfiles/filelist.txt"
-
-# Remove this line if you do not have neovim installed
-alias vi='nvim'
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-
-LANG=en_US.utf-8
-LC_ALL=en_US.utf-8
-
-# added by Miniconda3 installer
-export PATH="/afs/cern.ch/work/s/smehta/miniconda3/bin:$PATH"
-# Miniconda updated version
-. /afs/cern.ch/work/s/smehta/miniconda3/etc/profile.d/conda.sh
-
 # Syntax highlighting and tab completion
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -Uz compinit
+
+# Autocompletions for zsh commands
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Coloured man pages using less as pager
 man() {
@@ -59,25 +45,13 @@ alias rm="rm -i"
 alias x="ranger"
 alias c="cmus"
 alias h="htop"
-
-
-# EDIT only this part of the file if you do not know what you are doing
-# Refer the Theory section of the README if you are confused
-
-# added by NeoVim
-export PATH="$HOME/neovim/bin:$PATH"
+# Swapneel's custom commands
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # Show OS info when opening a new terminal
-# Use this if you have installed neofetch using a package manager 
-# e.g. brew, yum, apt-get, etc.
-# neofetch
-
-# If you are non-root user then clone neofetch and add the path here
-# Note that this is the path to the file named neofetch within the directory
-bash ~/neofetch-5.0.0/neofetch
-
-
-# Do not edit this part of the file unless necessary
+# requires neofetch - for osx run `brew install neofetch`
+neofetch
+fortune softwareengineering | cowsay -f homer | lolcat
 
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -160,12 +134,9 @@ ENABLE_CORRECTION="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Plugins to load
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions rand-quote)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Prompt elements
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv time battery)
-source  ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme
-# Prints a random quote to the terminal - requires `curl` to work
-quote
