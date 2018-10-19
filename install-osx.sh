@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Change to your home directory (~)
 cd $HOME
@@ -22,6 +22,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 # install powerlevel9k into a subfolder for oh-my-zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+# install the font packs that let you use the cool icons you see
+# Powerline Fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+./fonts/install.sh
+# Nerd Fonts
+git clone https://github.com/ryanoasis/nerd-fonts.git
+./nerd-fonts/install.sh
 
 # install zsh-autosuggestions
 # add 'plugins=([other plugins...] zsh-autosuggestions)' to your .zshrc file if it isn't already present
@@ -50,6 +58,9 @@ pip install thefuck
 
 # Run tests to verify package installation
 ./test.sh
+
+# Remove the repositories that aren't needed anymore
+rm -r dotfiles/ nerd-fonts/
 
 # Source your .zshrc file for all the changes to reflect
 source ~/.zshrc
