@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Run tests to verify the packages installed by the installation script
 
@@ -36,7 +36,8 @@ else
     echo -e "\t $ pip install thefuck"
 fi
 
-echo "Thank you for running the tests"
-echo "Please feel free to offer your feedback at swapneel.mehta96@gmail.com"
 echo "In case of errors please open an issue at"
 echo -e "\t https://github.com/swapneelm/dotfiles"
+
+echo "Thank you for running the tests"
+echo "Please feel free to offer your feedback at swapneel.mehta96@gmail.com"
