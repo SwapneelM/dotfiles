@@ -160,5 +160,7 @@ Read more: [What is the difference between bash and sh](https://stackoverflow.co
 Read more about zsh: [Source Forge](http://zsh.sourceforge.net/)
 
 ## Cool-ass Modifications to the Terminal
-
 * For more cool tutorials check out this section on [Awesome ZSH Plugins](https://github.com/unixorn/awesome-zsh-plugins#generic-zsh)
+
+## Additional Stuff
+* [Hacking your Terminal with ASCII Artwork](https://codeburst.io/how-i-hacked-my-terminal-so-a-happy-whale-would-spout-software-quotes-at-me-6791e6c74fc6)
