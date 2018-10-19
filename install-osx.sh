@@ -48,5 +48,8 @@ gem install lolcat
 # Needs a pre-existing installation of Python
 pip install thefuck
 
+# Run tests to verify package installation
+./test.sh
+
 # Source your .zshrc file for all the changes to reflect
 source ~/.zshrc

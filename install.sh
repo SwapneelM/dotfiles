@@ -34,10 +34,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # install neofetch
 # Neofetch needs to be installed based on your OS as per the instructions
 # https://github.com/dylanaraps/neofetch/wiki/Installation
+sudo apt-get install neofetch
 
 # install fortune
 # Needs a pre-existing installation of Python
-# pip install fortune
+pip install fortune
 
 # [optional] install lolcat
 # Requires pre-existing installation of Ruby
@@ -45,4 +46,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # install thefuck
 # Needs a pre-existing installation of Python
-# pip install thefuck
+pip install thefuck
+
+# Run tests to verify package installation
+./test.sh
+
+# Source your .zshrc file for all the changes to reflect
+source ~/.zshrc
