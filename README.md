@@ -3,13 +3,14 @@ Configuration for your terminal and text-editor (vim) that will make you look mu
 
 **If you are a beginner, I strongly suggest you [Read the Theory first](#theory)**
 
-## Quick Install (untested)
+## Quick Install (beta)
 
 * Linux
-        $ ./install.sh  # You may still need to manually install some dependencies if it fails
+        $ ./install.sh  
 
 * OS X
         $ ./install-osx.sh
+
 
 ## Gallery
 
@@ -35,46 +36,92 @@ Yep, `thefuck` basically tells you what the fuck your command should be like. Al
 We now have a Homer Simpson spouting stuff - follow the blog post for more!
 * [Hacking your Terminal with ASCII Artwork](https://codeburst.io/how-i-hacked-my-terminal-so-a-happy-whale-would-spout-software-quotes-at-me-6791e6c74fc6)
 
-## Prerequisites
+## Manual Installation
 
-- [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh) (install to `~/.oh-my-zsh`)
-- [Powerlevel9k](https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions) (install, then copy to `~/.oh-my-zsh/themes/`)
-- [NeoVim](https://github.com/neovim/neovim) (standalone - if you don't use this then don't install it and remove the corresponding line from `~/.zshrc`)
-- [ZSH Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (this should go in `~/.oh-my-zsh/plugins`)
-- [ZSH Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (this should go in `~/.oh-my-zsh/plugins`)
-- [Neofetch](https://github.com/dylanaraps/neofetch) (standalone)
-- [The Fuck](https://github.com/nvbn/thefuck#installation) (yes, this is for real)
+#### [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh) (install to `~/.oh-my-zsh`)
 
-I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately not available on Linux, but it isn't mandatory for this to work). You should definitely consider using it if you're on OSX.
+#### [Powerlevel9k](https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions) (install to `~/.oh-my-zsh/themes/`)
+
+        $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+#### [Powerline Fonts](https://github.com/powerline/fonts)
+
+        $ git clone https://github.com/powerline/fonts.git --depth=1
+        $ ./fonts/install.sh
+        $ rm -rf fonts
+
+### Optional Addons
+
+**(These are standalone Tools; if you don't want these then don't install them and remove the corresponding line(s) from your `~/.zshrc` file)**
+
+#### [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts.git)
+
+        $ git clone https://github.com/ryanoasis/nerd-fonts.git
+        $ ./nerd-fonts/install.sh
+
+#### [NeoVim](https://github.com/neovim/neovim)
+
+#### [ZSH Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+   
+        $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+
+#### [ZSH Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+        $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+#### [Neofetch](https://github.com/dylanaraps/neofetch)
+
+* For OSX:
+        
+        $ brew install neofetch
+
+* For Linux:
+
+        $ sudo apt-get install neofetch
+
+* For Fedora/RHEL/CentOS
+
+        $ yum install neofetch
+
+
+#### [The Fuck](https://github.com/nvbn/thefuck#installation)(yes, this is for real)
+
+        $ pip install thefuck
+
+#### [Fortune Quotes](https://en.wikipedia.org/wiki/Fortune_(Unix))
+
+        $ pip install fortune
+
+#### iTerm2 (OSX only)
+* I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately not available on Linux, but it isn't mandatory for dotfiles to work). 
+* You should _definitely_ consider using it if you're on OSX.
 
 ## Tips and Tricks (Read this, it saves you debugging time):
 
-* If you are not sure where you want to clone and install these packages, I suggest you `cd ~` and install all of them there because it enables ease-of-removal should you choose to do so.
+* If you are not sure where you want to clone and install these packages, I suggest you `cd ~` (also called your home directory and stored in the `$HOME` variable) and install all of them there because it enables ease-of-removal should you choose to do so.
 
-* Follow the installation procedures of each of the above packages and you should have most of the setup already complete with the default `~/.zshrc` file with the theme `robbyrussell` active. This is also a good stage to stop and evaluate if this configuration is good enough for your use. If it is, you don't need the rest.
+* Follow the installation procedures of the above packages until the optional section and you should have most of the setup already complete with the default `~/.zshrc` file using the theme `robbyrussell`. This is also a good stage to stop and evaluate if this configuration is good enough for your use. If it is, you don't need the rest.
 
-* In case powerlevel9k is not working (symbols displayed on the terminal are gibberish) you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](https://powerline.readthedocs.io/en/latest/installation.html#installation-on-various-platforms). Don't clone the entire directory; use the `depth` flag when cloning:
-    ```
-    $ git clone https://github.com/powerline/fonts.git --depth=1
-    ```
+* In case powerlevel9k is not working **(symbols displayed on the terminal are gibberish)** you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](#powerline-fonts)
 
 * If you are installing on a machine where you do not have `sudo` privileges, this procedure still works. Just ensure you are installing all the prerequisites from source (i.e. cloning from git (followed by running `make` in case of neovim), and then installing to a local directory.
 
 * ZSH Autosuggestions and ZSH Syntax Highlighting can be cloned into the `~/.oh-my-zsh/plugins` directory and then added into the `~/.zshrc` file on the line where it loads `plugins=(...)` (it's towards the end of the file). I've already made these changes just so you don't have much editing to do later.
 
-## Installation Instructions
+## Manual Installation: Understand what you just did!
+
+* The prerequisites are a bunch of software tools designed to automate certain tasks. For instance, zsh vs. bash 
 
 * Once you have installed the prerequisites, the next step is to activate a different theme (in this case, the theme I have active). For this, you need to clone this repository:
-    ```
-    $ git clone https://github.com/SwapneelM/dotfiles ~/dotfiles
-    ```
+
+        $ git clone https://github.com/SwapneelM/dotfiles ~/dotfiles
 
 *  Copy the `powerlevel9k` directory to `~/.oh-my-zsh/themes` for it to be available with the other themes.
 
 * Now backup your current .zshrc file:
-    ```
-    $ mv ~/.zshrc ~/.zshrc.bak
-    ```
+
+        $ mv ~/.zshrc ~/.zshrc.bak
 
 * Now, move all the files (Vim and ZSH related) to `~` i.e. `.vim_runtime`, `.zshrc`, and `.vimrc`.
 
@@ -87,13 +134,12 @@ I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately 
 * Test the commands `neofetch`, `nvim`, and observe your terminal enter God-mode (no this is a figure of speech, not another Intel vulnerability, geez).
 
 * Once you're certain everything works, and you like `zsh` enough to consider switching over to it try to change your default shell to zsh so that you are able to avoid the need to run the command `zsh` each time you open a shell.
-    ```
-    $ chsh -s $(which zsh)
-    ```
+    
+        $ chsh -s $(which zsh)
+
 * **For non-root users**, you will have to hack your way around this because it may not allow you to set the default shell. In this case read about the [theory](#theory) for rc files and add a line to the end of your `~/.bashrc`. What happens is each time you login/open a shell, the system runs `source ~/.bashrc` so you're basically asking for it to run a command that calls the Z shell to be executed each time the system sources the file.
-    ```
-    $ echo "exec zsh" >> ~/.bashrc
-    ```
+
+        $ echo "exec zsh" >> ~/.bashrc
 
 # Theory
 
@@ -121,13 +167,11 @@ I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately 
 
 * The same goes for neovim, where I have first added the path to neovim installation to the `$PATH` variable and then added a line called `alias vi='nvim'` which means the `vi` command which I conventionally used to open the `vim` editor is now replaced by the `nvim` command which is searched for on the path and found in the neovim directory:
 
-```
-    # added by NeoVim
-    export PATH="$HOME/neovim/bin:$PATH"
+        # added by NeoVim
+        export PATH="$HOME/neovim/bin:$PATH"
 
-    # Remove this line if you do not have neovim installed
-    alias vi='nvim'
-```
+        # Remove this line if you do not have neovim installed
+        alias vi='nvim'
 
 **If this is your first time trying out something like this, here are some more ideas that you would do well to be aware of:**
 
