@@ -3,6 +3,14 @@ Configuration for your terminal and text-editor (vim) that will make you look mu
 
 **If you are a beginner, I strongly suggest you [Read the Theory first](#theory)**
 
+## Quick Install (untested)
+
+* Linux
+        $ ./install.sh  # You may still need to manually install some dependencies if it fails
+
+* OS X
+        $ ./install-osx.sh
+
 ## Gallery
 
 ![My Old Terminal](img/bash-terminal-plain.png)
@@ -22,6 +30,10 @@ It is insanely helpful to know the branch, commit, and status of your current di
 
 ![Just Messing Around with Plugins](img/thefuck-example.png)
 Yep, `thefuck` basically tells you what the fuck your command should be like. Also cute.
+
+![Update: Homer is now in business!](img/homer-simpson.png)
+We now have a Homer Simpson spouting stuff - follow the blog post for more!
+* [Hacking your Terminal with ASCII Artwork](https://codeburst.io/how-i-hacked-my-terminal-so-a-happy-whale-would-spout-software-quotes-at-me-6791e6c74fc6)
 
 ## Prerequisites
 
