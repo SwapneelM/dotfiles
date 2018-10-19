@@ -50,7 +50,22 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # Show OS info when opening a new terminal
 # requires neofetch - for osx run `brew install neofetch`
-neofetch
+if neofetch; then                                                                    12:17  46% (2:19) 
+    echo ""
+    echo "Neofetch isn't installed automatically so you will have to run a manual install"
+    echo "For Linux you can try"
+    echo -e "\t sudo apt-get install neofetch"
+    echo -e "\n"
+    echo "For OS X you can try"
+    echo -e "\t brew install neofetch"
+    echo "For RHEL/Fedora/CentOS you can try"
+    echo -e "\t sudo yum install neofetch"
+    echo "For more platforms or in case of errors take a look at installation instructions"
+    echo -e "\t https://github.com/dylanaraps/neofetch/wiki/Installation"
+else
+    echo "Neofetch failed to install"
+fi
+
 fortune softwareengineering | cowsay -f homer | lolcat
 
 # Font mode for powerlevel9k
