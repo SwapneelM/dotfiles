@@ -3,13 +3,15 @@ Configuration for your terminal and text-editor (vim) that will make you look mu
 
 **If you are a beginner, I strongly suggest you [Read the Theory first](#theory)**
 
-## Quick Install (untested)
+## Quick Install (untested, but safe to run)
 
-* Linux
-        $ ./install.sh  # You may still need to manually install some dependencies if it fails
+* For Linux users:
+                
+                $ ./install.sh
 
-* OS X
-        $ ./install-osx.sh
+* For OS X users:
+                
+                $ ./install-osx.sh
 
 ## Gallery
 
@@ -54,9 +56,8 @@ I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately 
 * Follow the installation procedures of each of the above packages and you should have most of the setup already complete with the default `~/.zshrc` file with the theme `robbyrussell` active. This is also a good stage to stop and evaluate if this configuration is good enough for your use. If it is, you don't need the rest.
 
 * In case powerlevel9k is not working (symbols displayed on the terminal are gibberish) you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](https://powerline.readthedocs.io/en/latest/installation.html#installation-on-various-platforms). Don't clone the entire directory; use the `depth` flag when cloning:
-    ```
-    $ git clone https://github.com/powerline/fonts.git --depth=1
-    ```
+                
+                $ git clone https://github.com/powerline/fonts.git --depth=1
 
 * If you are installing on a machine where you do not have `sudo` privileges, this procedure still works. Just ensure you are installing all the prerequisites from source (i.e. cloning from git (followed by running `make` in case of neovim), and then installing to a local directory.
 
@@ -65,16 +66,14 @@ I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately 
 ## Installation Instructions
 
 * Once you have installed the prerequisites, the next step is to activate a different theme (in this case, the theme I have active). For this, you need to clone this repository:
-    ```
-    $ git clone https://github.com/SwapneelM/dotfiles ~/dotfiles
-    ```
+
+                $ git clone https://github.com/SwapneelM/dotfiles ~/dotfiles
 
 *  Copy the `powerlevel9k` directory to `~/.oh-my-zsh/themes` for it to be available with the other themes.
 
 * Now backup your current .zshrc file:
-    ```
-    $ mv ~/.zshrc ~/.zshrc.bak
-    ```
+                
+                $ mv ~/.zshrc ~/.zshrc.bak
 
 * Now, move all the files (Vim and ZSH related) to `~` i.e. `.vim_runtime`, `.zshrc`, and `.vimrc`.
 
@@ -87,13 +86,12 @@ I use [iTerm2](https://www.iterm2.com/features.html) for the Mac (unfortunately 
 * Test the commands `neofetch`, `nvim`, and observe your terminal enter God-mode (no this is a figure of speech, not another Intel vulnerability, geez).
 
 * Once you're certain everything works, and you like `zsh` enough to consider switching over to it try to change your default shell to zsh so that you are able to avoid the need to run the command `zsh` each time you open a shell.
-    ```
-    $ chsh -s $(which zsh)
-    ```
+
+                $ chsh -s $(which zsh)
+                
 * **For non-root users**, you will have to hack your way around this because it may not allow you to set the default shell. In this case read about the [theory](#theory) for rc files and add a line to the end of your `~/.bashrc`. What happens is each time you login/open a shell, the system runs `source ~/.bashrc` so you're basically asking for it to run a command that calls the Z shell to be executed each time the system sources the file.
-    ```
-    $ echo "exec zsh" >> ~/.bashrc
-    ```
+
+                $ echo "exec zsh" >> ~/.bashrc
 
 # Theory
 
