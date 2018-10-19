@@ -6,11 +6,12 @@ Configuration for your terminal and text-editor (vim) that will make you look mu
 ## Quick Install (beta)
 
 * Linux
-        $ ./install.sh  
+ 
+        $ ./install.sh
 
-* OS X
+* For OS X users:
+                
         $ ./install-osx.sh
-
 
 ## Gallery
 
@@ -103,7 +104,9 @@ We now have a Homer Simpson spouting stuff - follow the blog post for more!
 
 * Follow the installation procedures of the above packages until the optional section and you should have most of the setup already complete with the default `~/.zshrc` file using the theme `robbyrussell`. This is also a good stage to stop and evaluate if this configuration is good enough for your use. If it is, you don't need the rest.
 
-* In case powerlevel9k is not working **(symbols displayed on the terminal are gibberish)** you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](#powerline-fonts)
+* In case powerlevel9k is not working (symbols displayed on the terminal are gibberish) you most likely need to install the specific font i.e. a font that contains the git symbols for instance). Install [Powerline Fonts](https://github.com/powerline/font) using the [instructions](https://powerline.readthedocs.io/en/latest/installation.html#installation-on-various-platforms). Don't clone the entire directory; use the `depth` flag when cloning:
+                
+                $ git clone https://github.com/powerline/fonts.git --depth=1
 
 * If you are installing on a machine where you do not have `sudo` privileges, this procedure still works. Just ensure you are installing all the prerequisites from source (i.e. cloning from git (followed by running `make` in case of neovim), and then installing to a local directory.
 
@@ -119,11 +122,13 @@ We now have a Homer Simpson spouting stuff - follow the blog post for more!
 
 *  Copy the `powerlevel9k` directory to `~/.oh-my-zsh/themes` for it to be available with the other themes.
 
-* Now backup your current .zshrc file:
+* Now backup your current `.zshrc` file (and if existing, then the `.vim*` files/folders):
 
         $ mv ~/.zshrc ~/.zshrc.bak
+        $ mv ~/.vimrc ~/.vimrc.bak
+        $ mv ~/.vim_runtime ~/.vim_runtime_bak
 
-* Now, move all the files (Vim and ZSH related) to `~` i.e. `.vim_runtime`, `.zshrc`, and `.vimrc`.
+* Now, move all the downloaded files (Vim and ZSH related) to `~` i.e. `.vim_runtime`, `.zshrc`, and `.vimrc`.
 
 * To install the awesome vim configuration, run `sh ~/.vim_runtime/install_awesome_vimrc.sh` (there's also a basic one - check the folder `.vim_runtime` for a README explaining this).
 
@@ -140,6 +145,14 @@ We now have a Homer Simpson spouting stuff - follow the blog post for more!
 * **For non-root users**, you will have to hack your way around this because it may not allow you to set the default shell. In this case read about the [theory](#theory) for rc files and add a line to the end of your `~/.bashrc`. What happens is each time you login/open a shell, the system runs `source ~/.bashrc` so you're basically asking for it to run a command that calls the Z shell to be executed each time the system sources the file.
 
         $ echo "exec zsh" >> ~/.bashrc
+=======
+
+                $ chsh -s $(which zsh)
+                
+* **For non-root users**, you will have to hack your way around this because it may not allow you to set the default shell. In this case read about the [theory](#theory) for rc files and add a line to the end of your `~/.bashrc`. What happens is each time you login/open a shell, the system runs `source ~/.bashrc` so you're basically asking for it to run a command that calls the Z shell to be executed each time the system sources the file.
+
+                $ echo "exec zsh" >> ~/.bashrc
+>>>>>>> a051f1b0ef261e711676a23b06230ee6bc784cf7
 
 # Theory
 
