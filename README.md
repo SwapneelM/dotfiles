@@ -228,7 +228,7 @@ Read more: [What is the difference between bash and sh](https://stackoverflow.co
 
 Read more about zsh: [Source Forge](http://zsh.sourceforge.net/)
 
-## Cool-ass Modifications to the Terminal
+## More Cool Modifications to the Terminal
 * For more cool tutorials check out this section on [Awesome ZSH Plugins](https://github.com/unixorn/awesome-zsh-plugins#generic-zsh)
 
 ## Additional Stuff
