@@ -152,7 +152,6 @@ We now have a Homer Simpson spouting stuff - follow the blog post for more!
 * **For non-root users**, you will have to hack your way around this because it may not allow you to set the default shell. In this case read about the [theory](#theory) for rc files and add a line to the end of your `~/.bashrc`. What happens is each time you login/open a shell, the system runs `source ~/.bashrc` so you're basically asking for it to run a command that calls the Z shell to be executed each time the system sources the file.
 
                 $ echo "exec zsh" >> ~/.bashrc
->>>>>>> a051f1b0ef261e711676a23b06230ee6bc784cf7
 
 # Theory
 
@@ -210,7 +209,7 @@ Read more: [The difference between .bashrc, .bash_profile, .environment](https:/
 
 **Why do we need them?**
 
-Now, imagine I break your laptop in a way that the no data can’t be recovered. (Pretty dark, right?) and ask you to restore all your little shortcuts, tweaks, and settings that you took hours to configure in your applications. An impossible task. Not really. This is actually where dotfiles come in, these nifty text files that you save, contain thousands of key-value pairs defining each and every aspect of your applications. You can restore your system back to that point in a matter of minutes. (answer by Vipul Gupta)
+Now, imagine I break your laptop in a way that the data can’t ever be recovered. (Pretty dark, right?) and ask you to restore all your little shortcuts, tweaks, and settings that you took hours to configure in your applications. An impossible task. Not really. This is actually where dotfiles come in, these nifty text files that you save, contain thousands of key-value pairs defining each and every aspect of your applications. You can restore your system back to that point in a matter of minutes. (answer by Vipul Gupta)
 
 Read on Quora: [What are dotfiles](https://www.quora.com/What-are-dotfiles)
 
